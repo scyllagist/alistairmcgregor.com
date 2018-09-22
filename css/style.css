@@ -1,0 +1,32 @@
+body {
+  background:#000;
+  font: 10px sans-serif;
+  margin:0 auto;
+  pointer-events: all;
+}
+ 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+ 
+.area {
+  fill: black;
+}
+ 
+.line {
+  stroke-width:2;
+  stroke:#eee;
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+circle {
+  fill: none;
+  stroke-width: 2.5px;
+}
