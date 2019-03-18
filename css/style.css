@@ -1,17 +1,17 @@
 body {
-  background:#000;
+  background: #000;
   font: 10px sans-serif;
-  margin:0 auto;
+  margin: 0 auto;
   pointer-events: all;
 }
 
 .column {
-  float: left;
+  float: middle;
 }
 
 .left {
-  float: left;
-  width:70%;
+  float: middle;
+  width: 70%;
 }
 
 .right {
@@ -25,21 +25,21 @@ body {
   display: table;
   clear: both;
 }
- 
+
 .axis path,
 .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
- 
+
 .area {
   fill: black;
 }
- 
+
 .line {
-  stroke-width:2;
-  stroke:#eee;
+  stroke-width: 2;
+  stroke: #eee;
 }
 
 rect {
@@ -52,24 +52,39 @@ circle {
   stroke-width: 2.5px;
 }
 
-.container {
+.nav {
+  float: left;
+  position: relative;
+  left: 50%;
   text-align: center;
 }
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #000;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.nav .icon {
+  display: none;
+}
+
 .button{
-  text-decoration: none;
+  text-decoration:none;
   background:#000;
   color:#fff;
   border:none;
-  position:relative;
-  height:60px;
-  font-size:1.6em;
-  padding:0 2em;
+  float: left;
+  position: relative;
+  left: -50%;
+  font-size:1.8em;
+  padding:0 1em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
 }
 .button:hover{
-  text-decoration: none;
   background:#fff;
   color:#000;
 }
