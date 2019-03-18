@@ -4,6 +4,27 @@ body {
   margin:0 auto;
   pointer-events: all;
 }
+
+.column {
+  float: left;
+}
+
+.left {
+  float: left;
+  width:70%;
+}
+
+.right {
+  float: right;
+  width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
  
 .axis path,
 .axis line {
@@ -31,11 +52,11 @@ circle {
   stroke-width: 2.5px;
 }
 
-
 .container {
   text-align: center;
 }
 .button{
+  text-decoration: none;
   background:#000;
   color:#fff;
   border:none;
@@ -48,6 +69,7 @@ circle {
   outline:none;
 }
 .button:hover{
+  text-decoration: none;
   background:#fff;
   color:#000;
 }
