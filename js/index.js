@@ -40,6 +40,7 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.select("body").on("ontouchstart" in document ? "touchmove" : "mousemove", move);
+d3.select("body").on("scroll", move);
 
 d3.select(window).on('resize', resize); 
 
