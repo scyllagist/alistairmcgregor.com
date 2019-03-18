@@ -1,7 +1,7 @@
 var w = window,
     d = document,
     e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
+    g = d.getElementsByTagName('div')[0],
     x0 = w.innerWidth || e.clientWidth || g.clientWidth,
     y0 = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
@@ -12,7 +12,6 @@ var w = window,
 var margin = {top: verticalSpace, right: presHorAspect, bottom: verticalSpace, left: presHorAspect},
     width = x0 - margin.left - margin.right,
     height = y0 - margin.top - margin.bottom;
-
 
 var x = d3.time.scale()
     .domain([0, 1])
@@ -33,14 +32,13 @@ var line = d3.svg.line()
     .y(function(d) { return y(d.y); })
     .interpolate('basis');
  
-var svg = d3.select("body").append("svg")
+var svg = d3.select("div").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.select("body").on("ontouchstart" in document ? "touchmove" : "mousemove", move);
-d3.select("body").on("wheel", move);
+d3.select("div").on("ontouchstart" in document ? "touchmove" : "mousemove", move);
 
 d3.select(window).on('resize', resize); 
 
@@ -68,7 +66,7 @@ function resize() {
     .domain([0, 1])
     .range([height, 0]);
   
-	svg = d3.select("body").append("svg")
+	svg = d3.select("div").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
