@@ -10,9 +10,9 @@ var verticalSpace = y0 / 8;
 var presHorAspect = (x0 - (y0 - 70 - 2 * verticalSpace) * (5 / 6)) / 2;
 
 var margin = {
-    top: verticalSpace,
+    top: verticalSpace - 20,
     right: presHorAspect,
-    bottom: verticalSpace,
+    bottom: verticalSpace - 20,
     left: presHorAspect
   },
   width = x0 - margin.left - margin.right,
@@ -75,9 +75,9 @@ function resize() {
   var presHorAspect = (x0 - (y0 - 70 - 2 * verticalSpace) * (5 / 6)) / 2;
 
   var margin = {
-      top: verticalSpace,
+      top: verticalSpace - 20,
       right: presHorAspect,
-      bottom: verticalSpace,
+      bottom: verticalSpace - 20,
       left: presHorAspect
     },
     width = x0 - margin.left - margin.right,
