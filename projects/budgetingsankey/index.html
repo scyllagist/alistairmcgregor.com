@@ -200,9 +200,16 @@ blockquote:after {
 
  <h3>Diagram test</h3> 
  <p id="chart">
-<script src="http://d3js.org/d3.v3.min"></script>
 
 <script id="jsbin-javascript">
+ 
+ require.config({
+    paths: {
+        d3: "http://d3js.org/d3.v3.min"
+    }
+});
+
+require("d3")
 var alistairData = 
 {'nodes': [{'node': 0, 'name': 'indulgence'},
   {'node': 1, 'name': 'living expenses'},
