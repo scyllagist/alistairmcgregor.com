@@ -134,7 +134,7 @@ var alistairData =
   {'source': 6, 'target': 66, 'value': 594.41},
   {'source': 6, 'target': 67, 'value': 752.6500000000001}]}
 ;
- 
+
    var margin = {
     top : 5,
     right : 1,
@@ -143,14 +143,13 @@ var alistairData =
    }, 
 
    width = 800 - margin.left - margin.right, 
-   height = 900 - margin.top - margin.bottom;
+   height = 1000 - margin.top - margin.bottom;
    var formatNumber = d3.format(",.0f"), format = function(d) {
     return formatNumber(d) ;
    }, 
+   color = d3.scale.category20();
    
-   color = d3.scale.category20();   
-
-   var svg = d3.select("#chart")
+   var svg = d3.select("#d3-example")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
