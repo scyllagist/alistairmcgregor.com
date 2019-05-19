@@ -147,7 +147,7 @@ var alistairData =
    var formatNumber = d3.format(",.0f"), format = function(d) {
     return formatNumber(d) ;
    }, 
-   color = d3.scale.category20();
+   color = d3.scaleOrdinal(d3.schemeCategory20);
    
    var svg = d3.select("#chart")
     .append("svg")
